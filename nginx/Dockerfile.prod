@@ -1,0 +1,14 @@
+FROM nginx:stable-alpine
+
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d
+
+
+#RUN mkdir /var/www/html -p && touch /var/www/html/index.php
+
+# docker build -t manscalh/nginx:prod . -f Dockerfile.prod
+
+# docker network list
+# docker network create laranet
+# docker run -d --network laranet --name laravel manscalh/laravel:prod
+# docker run -d --network laranet --name nginx -p 8080:80 manscalh/nginx:prod
