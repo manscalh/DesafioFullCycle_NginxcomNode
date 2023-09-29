@@ -1,1 +1,0 @@
-#diretorio para o mysql
